@@ -16,8 +16,12 @@ app.get('/gifts', function(req, res) {
 });
 
 app.post('/gifts', function(req, res){
-    console.log('body:', req.body);//data becomes req.body
-    res.sendStatus(201);
+    console.log('body:', req.body);
+    gifts.push(req.body.newGiftProperty);//pushing new gift to the array 
+    console.log('gifts:', gifts);
+    
+    //data object in client.js becomes req.body using the body parser 
+    res.sendStatus(201);//created a new resource
     
 })
 app.get('/santa', function(req, res){

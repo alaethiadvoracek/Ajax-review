@@ -5,11 +5,11 @@ $(document).ready(start);
 function start(){
     //event listeners
     $('#addNewGift').on('click', addNewGift);
+    getGifts();
     // canSantaFly();
 } //end start function
 
 function addNewGift() {
-    console.log('adding new gift');
     let newGift = $('#giftName').val();
     console.log('adding new gift', newGift);
 
@@ -19,10 +19,12 @@ function addNewGift() {
         data: { newGiftProperty: newGift},//expects an object 
         success: function(response){
             console.log('added new gift', response);   
+            getGifts();
         },//end ajax
 
         error: function(response){
             console.log('error adding gift', response);
+            alert('oops');
             
         }//end error
      });
