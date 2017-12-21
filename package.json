@@ -1,11 +1,11 @@
 {
   "name": "ajax-day2",
   "version": "1.0.0",
-  "description": "npm: tool that helps share javascript modules      - npm site that helps manage packages",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
+    "start": "node server/server.js"
   },
   "author": "",
   "license": "ISC",
