@@ -20,17 +20,13 @@ function addNewGift() {
         success: function(response){
             console.log('added new gift', response);   
             getGifts();
-        },//end ajax
-
+        },//end success
         error: function(response){
             console.log('error adding gift', response);
-            alert('oops');
-            
+            //calling input and getting the input off of that value
+            alert('oops'); 
         }//end error
-     });
-    
-    //calling input and getting the input off of that value
-
+     });//end ajax method
 }//end add gift function 
 
 function canSantaFly(){
